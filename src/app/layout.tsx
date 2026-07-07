@@ -1,15 +1,28 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import { Orbitron, Albert_Sans } from "next/font/google";
+import FrameNavbar from "@/components/atoms/svg/FrameNavbar";
+import SVGNavSide from "@/components/atoms/svg/SVGNavSide";
+import Link from "next/link";
+import TextHeading3 from "@/components/atoms/typography/TextHeading3";
+import TextHeading4 from "@/components/atoms/typography/TextHeading4";
+import TextBody from "@/components/atoms/typography/TextBody";
+import Image from "next/image";
+import NavLink from "@/components/molecules/Links/NavLink";
+import Navbar from "@/components/organisms/Navbar";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const orbitron = Orbitron({
   subsets: ["latin"],
+  variable: "--font-orbitron",
+  weight: ["400", "500", "600", "700", "800", "900"],
+  display: "swap",
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const albert_sans = Albert_Sans({
   subsets: ["latin"],
+  variable: "--font-albert-sans",
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
+  display: "swap",
 });
 
 export const metadata: Metadata = {
@@ -25,9 +38,12 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      className={`h-full antialiased ${orbitron.variable} ${albert_sans.variable}`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="bg-blue-dark min-h-screen min-w-screen flex flex-col">
+        <Navbar />
+        {children}
+      </body>
     </html>
   );
 }
