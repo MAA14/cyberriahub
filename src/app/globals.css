@@ -1,6 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&family=Orbitron:wght@400..900&display=swap");
 @import "tailwindcss";
 
+* {
+  transition-duration: 300ms;
+}
+
 :root {
   --white: 255, 255, 255;
   --blue-shadow: 41, 54, 78;
