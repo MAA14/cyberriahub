@@ -17,7 +17,7 @@ const Home = () => {
           alt="Logo"
           width={200}
           height={200}
-          className="mb-3"
+          className="mb-3 relative z-1"
         />
         <div className="desc-long px-10 flex items-center justify-center">
           <TextHeading3 className="text-white">WELCOME TO</TextHeading3>
