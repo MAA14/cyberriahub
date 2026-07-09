@@ -23,6 +23,13 @@
 
 @media screen and (width <=900px) {
   .background-sparkle::before {
+    background-image: url("/images/Background-Home-Tablet.png");
+    background-position: bottom;
+  }
+}
+
+@media screen and (width <=600px) {
+  .background-sparkle::before {
     background-image: url("/images/Background-Home-Mobile.png");
     background-position: bottom;
   }

@@ -24,7 +24,7 @@ const FrameHexagon = ({ children, className, ...props }: FrameHexagonProps) => (
     >
       <foreignObject x="0" y="0" width="100%" height="100%">
         <div
-          className="absolute top-0 left-0 h-full w-full group-hover:bg-blue-light bg-blue-dark-150 effect-glassmorphism transition-colors ease-in"
+          className="absolute top-0 left-0 h-full w-full group-hover:bg-blue-light bg-blue-dark/30 effect-glassmorphism transition-colors ease-in"
           style={{ clipPath: "url(#BackgroundBlur)" }}
         ></div>
       </foreignObject>
